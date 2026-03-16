@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIA_GAME_G2_SIGNUP_PAGE</title>
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      text-decoration: none;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://static.vecteezy.com/system/resources/thumbnails/032/481/150/small_2x/game-2d-platformer-background-in-cartoon-style-generate-ai-photo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .register-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: min(380px, 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .register-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      transition: transform 0.2s ease;
+    }
+    
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .back-link {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #2575fc;
+      text-decoration: none;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    
+    .btn:active{
+      transform: scale(0.95)!important;
+      color: rgba(255, 255, 255, 0.25) !important;
+    }
+    
+    .back-link:active {
+      transform: scale(0.95)!important;
+    }
+    
+    
+    #r-user,
+    #r-pass,
+    #r-email,
+    #r-cpass {
+      display: none;
+      font-size: 0.75rem;
+      color: red;
+    }
+    
+    @keyframes shake {
+      0% {
+        transform: translateX(0.5rem);
+      }
+      
+      50% {
+        transform: translateX(-0.5rem);
+      }
+      
+      100% {
+        transform: translateX(0.5rem);
+      }
+    }
+    
+    .shakeme {
+      animation: shake 0.1s linear 3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register-container">
+    <h2>Create Account</h2>
+    <input class="r-input" type="text" placeholder="Username" id="username" required>
+    <p id="r-user">*incorrect username*</p>
+    <input class="r-input" type="email" placeholder="Email" id="email" required>
+    <p id="r-email">*incorrect email*</p>
+    <input class="r-input" type="password" id="password" placeholder="Password" required pattern="^[A-Za-z\\d]{6,12}$" title="Password must be 6-12 characters long">
+    <p id="r-pass">*incorrect password*</p>
+    <input class="r-input" type="password" id="confirm-password" placeholder="Confirm Password" required>
+    <p id="r-cpass">*incorrect correct password*</p>
+    <button class="btn" id="register-btn">Register</button>
+    <a href="../index.html" class="back-link">Back to Login</a>
+  </div>
+  
+  <script type="module" src="../javascript/register.js"></script>
+</body>
+
+</html>
